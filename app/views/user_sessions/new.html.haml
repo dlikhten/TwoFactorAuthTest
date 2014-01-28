@@ -1,0 +1,14 @@
+%h1 Sign In
+
+= form_for @user_session do |f|
+  %ul
+    %li
+      = f.label :email
+      = f.text_field :email
+
+    %li
+      = f.label :password
+      = f.password_field :password
+
+  .actions
+    = f.submit "Sign In"
