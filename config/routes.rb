@@ -7,6 +7,9 @@ TwoFactorAuthTest::Application.routes.draw do
   post 'sign-in' => 'user_sessions#create'
   get 'sign-out' => 'user_sessions#destroy', as: :sign_out
 
+  get 'authorize-account' => 'user_authorizations#new', as: :user_authorizations
+  post 'authorize-account' => 'user_authorizations#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

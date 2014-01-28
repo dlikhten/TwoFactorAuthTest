@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140128160939) do
+ActiveRecord::Schema.define(version: 20140128191707) do
+
+  create_table "two_factor_auth_tokens", force: true do |t|
+    t.integer  "user_id",    null: false
+    t.string   "token",      null: false
+    t.datetime "expires_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "two_factor_auth_tokens", ["user_id", "token"], name: "index_two_factor_auth_tokens_on_user_id_and_token", unique: true
+
+  create_table "user_authorizations", force: true do |t|
+    t.integer  "user_id",    null: false
+    t.string   "token",      null: false
+    t.datetime "expires_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_authorizations", ["user_id", "token"], name: "index_user_authorizations_on_user_id_and_token", unique: true
 
   create_table "users", force: true do |t|
     t.string   "full_name"

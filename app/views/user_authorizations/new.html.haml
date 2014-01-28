@@ -1,0 +1,10 @@
+= form_for @user_authentication_form, url: user_authorizations_path do |f|
+  %h1 Please enter your authentication token (see email)
+
+  %ul
+    %li
+      = f.label :token
+      = f.text_field :token
+
+  .actions
+    = f.submit "Authorize This Machine"

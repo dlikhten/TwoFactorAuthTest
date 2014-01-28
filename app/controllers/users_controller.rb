@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :ensure_logged_in
+  before_action :ensure_authorized
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
