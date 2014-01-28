@@ -27,13 +27,11 @@ class UserAuthorizationForm
   end
 
   def authorize!
-    UserAuthorization.transaction do
-      tfa_token.destroy
-      @auth_token ||= UserAuthorization.create_for_user(user)
-      @auth_token.save!
+    tfa_token.destroy
+    @auth_token ||= UserAuthorization.create_for_user(user)
+    @auth_token.save!
 
-      @auth_token
-    end
+    @auth_token
   end
 
   def remember_authorization?

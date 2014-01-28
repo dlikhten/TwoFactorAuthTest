@@ -12,7 +12,15 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user_authentication
-    @authentication_token ||= UserAuthorization.find_for_user(current_user, session[:current_authorization_token])
+    if @authentication_token.blank?
+      if session[:current_authorization_token].blank?
+        @authentication_token = UserAuthorization.find_for_user(current_user, request.cookie_jar.permanent.signed[:authentication_tokens])
+      else
+        @authentication_token = UserAuthorization.find_for_user(current_user, [session[:current_authorization_token]])
+      end
+    end
+
+    @authentication_token
   end
 
   def log_off
@@ -24,7 +32,10 @@ class ApplicationController < ActionController::Base
   end
 
   def add_premanent_authorization_token(token)
-    # TODO: implement me
+    logger.info("Remembering authentication for #{token.user.email} / #{token.token}")
+    logger.info(request.cookie_jar.permanent.signed[:authentication_tokens])
+    request.cookie_jar.permanent.signed[:authentication_tokens] = (request.cookie_jar.permanent.signed[:authentication_tokens] || []) + [token.token]
+    logger.info(request.cookie_jar.permanent.signed[:authentication_tokens])
   end
 
   def authorization_token=(token)

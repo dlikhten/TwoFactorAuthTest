@@ -6,5 +6,10 @@
       = f.label :token
       = f.text_field :token
 
+    %li
+      %label
+        Remember this computer for 30 days?
+        = f.check_box :remember_authorization
+
   .actions
     = f.submit "Authorize This Machine"
