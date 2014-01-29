@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9b570cca-a00f-43c6-ab8d-d38f3822699e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_authorizations/new.html.haml" afterPath="$PROJECT_DIR$/app/views/user_authorizations/new.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user_authorization_form.rb" afterPath="$PROJECT_DIR$/app/models/user_authorization_form.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/user_authorizations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/user_authorizations_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="2fa_proto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +27,7 @@
       <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="32" selection-start="724" selection-end="724" vertical-scroll-proportion="0.25" vertical-offset="0" max-vertical-offset="2430">
+            <state line="21" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="0.29166666" vertical-offset="0" max-vertical-offset="2385">
               <folding />
             </state>
           </provider>
@@ -40,7 +36,7 @@
       <file leaf-file-name="two_factor_auth_token.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/two_factor_auth_token.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="91" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+            <state line="16" column="50" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -847,13 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/two_factor_auth_token.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="91" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/user_sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="6" selection-start="265" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
@@ -903,9 +892,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/two_factor_auth_token.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="50" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="724" selection-end="724" vertical-scroll-proportion="0.25" vertical-offset="0" max-vertical-offset="2430">
+        <state line="21" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="0.29166666" vertical-offset="0" max-vertical-offset="2385">
           <folding />
         </state>
       </provider>
